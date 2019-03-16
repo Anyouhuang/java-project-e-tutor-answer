@@ -1,0 +1,9 @@
+import java.math.BigDecimal;
+public class Main{		
+	public static void main(String[] args) {
+		java.util.Scanner sc = new java.util.Scanner(System.in);     
+        double a = sc.nextDouble();
+        double b =  new BigDecimal(a*a).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();  //四捨五入到第1位
+        System.out.println(+b);
+	}
+}
