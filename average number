@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main{			
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);  
+		int num=sc.nextInt(),i;
+		double average=0;
+		int[] score=new int[num];
+		for(i=0;i<num;i++) {
+			score[i]=sc.nextInt();
+			average=average+score[i];
+		}
+		if(average%num==0) {
+			System.out.println(average/num);
+		}else System.out.printf("%.3f\n",average/num);
+	}
+}
