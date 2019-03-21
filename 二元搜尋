@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main {
+	 public static void main(String[] args) {
+		 Scanner sc = new Scanner(System.in);
+		 int n[]=new int[8],i,A=sc.nextInt();
+		 for(i=0;i<8;i++) {
+			 n[i]=i;
+		 }
+		 if(A<8 && A>=0) {
+			 System.out.printf("%d\n",n[A]);
+		 }else System.out.println(-1);
+		 
+	}
+}
