@@ -6,6 +6,6 @@ public class Main {
          for(int i=1;i<=n;i++) {  
              all=all*i;  
          }  
-         System.out.printf("%d\n",all);  
+         System.out.println(all);  
      }  
 }  
