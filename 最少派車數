@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int misson =sc.nextInt();
+		int[] time=new int[24];
+		
+		for(int i=0;i<misson;i++) {
+			
+			int first=sc.nextInt();
+			int end=sc.nextInt();
+			for(int j=first;j<end;j++) {
+				time[j]++;	
+				
+			}
+			
+		}	
+		
+		int biggest=time[0];
+		int	nexttime=time[1];
+		for(int i=0;i<23;i++) {
+			if(biggest<nexttime) {
+				biggest=nexttime;
+			}
+			nexttime=time[i+1];
+		}
+		System.out.println(biggest);
+	}
+
+}
