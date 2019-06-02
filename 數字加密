@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int num=sc.nextInt();
+
+		int tho,hun,ten,one;
+		int a=num/1000;
+		int b=(num-a*1000)/100;
+		int c=(num-a*1000-b*100)/10;
+		int d=num-a*1000-b*100-c*10;
+		
+		tho=(c+7)%10;
+		hun=(d+7)%10;
+		ten=(a+7)%10;
+		one=(b+7)%10;
+		
+		System.out.print(tho);
+		System.out.print(hun);
+		System.out.print(ten);
+		System.out.println(one);
+	}
+		
+}
