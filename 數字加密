@@ -1,3 +1,4 @@
+//輸入一個4位數，將每一位數+7取10餘數，千位十位互換，百位各位互換
 import java.util.*;
 public class Main {
 
