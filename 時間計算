@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {		
+		Scanner sc = new Scanner(System.in);
+		
+		int sec=sc.nextInt();
+		int day=sec/86400,hour=(sec-day*86400)/3600,min=(sec-day*86400-hour*3600)/60,second=sec%60;
+		System.out.println(day+" days");
+		System.out.println(hour+" hours");
+		System.out.println(min+" minutes");
+		System.out.println(second+" seconds");
+	}
+	
+}
