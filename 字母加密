@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner ( System.in ) ;
+        
+        String string = sc.nextLine () ;
+        
+        char[] words = string.toCharArray () ;
+        
+        int move = sc.nextInt () ; 
+        
+        for ( int i = 0 ; i <  words.length ; i += 1 ) {
+            int test = words[i] ; // 將字元轉換成int模式
+            test += move ;
+            // 判斷是否為字元
+            if ( Character.isLetter ( words[i] ) ) {
+                // 判斷字母大小寫
+                if ( Character.isUpperCase ( words[i] ) && test > 'Z' ) {
+                    test -= 26 ;
+                }
+                else if ( test > 'z' ) {
+                    test -= 26 ;
+                }
+                words[i] = (char)test ;
+            } // 判斷是否為數字
+            else if ( Character.isDigit ( words[i] ) ) {
+                if ( test > '9' ) {
+                    test -= 10 ;
+                }
+                words[i] = (char)test ;
+            }
+        }
+        
+        System.out.println ( new String ( words ) ) ;
+		
+	}
+}
